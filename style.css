@@ -23,11 +23,38 @@ body {
 }
 
 #cutter1 {
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
 }
 
 #cutter2 {
-    clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
 }
 
+#cutter3 {
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+}
+
+
+.cutter-two {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(bg2.jpg);
+    background-size: cover;
+}
+
+#cutter-2-1 {
+    top: 100%;
+    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+}
+
+#cutter-2-2 {
+    bottom: 100%;
+    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
+}
+
+#cutter-2-3 {
+    top: 100%;
+    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
+}
 

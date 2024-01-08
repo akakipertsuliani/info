@@ -58,3 +58,30 @@ body {
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
 }
 
+.wrapper {
+    width: 400vw;
+    height: 100vh;
+    display: flex;
+}
+
+.section01 {
+    background: transparent;
+}
+
+.section02 {
+    background: lightcoral;
+}
+
+.section03 {
+    background: lightseagreen;
+}
+
+.section04 {
+    background: lightskyblue;
+}
+
+.zewrapper {
+    position: absolute;
+    top: 100vh;
+    z-index: 99;
+}

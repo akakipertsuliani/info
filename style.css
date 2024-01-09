@@ -5,8 +5,9 @@
 
 body {
     max-width: 100vw;
-    min-height: 200vh;
+    height: 300vh;
     background: lightblue;
+    overflow-x: hidden;
 }
 
 .section {
@@ -34,7 +35,6 @@ body {
     clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
 }
 
-
 .cutter-two {
     position: fixed;
     width: 100vw;
@@ -59,7 +59,7 @@ body {
 }
 
 .wrapper {
-    width: 400vw;
+    width: 500vw;
     height: 100vh;
     display: flex;
 }
@@ -77,11 +77,20 @@ body {
 }
 
 .section04 {
-    background: lightskyblue;
+    background-image: url(bg1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.section5 {
+    position: relative;
+    z-index: 5;
+    background: red;
 }
 
 .zewrapper {
     position: absolute;
     top: 100vh;
-    z-index: 99;
+    z-index: 3;
 }

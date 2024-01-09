@@ -16,15 +16,15 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-const races = document.querySelector(".wrapper");
-console.log(races.offsetWidth)
+const wrapper = document.querySelector(".wrapper");
+console.log(wrapper.offsetWidth)
 
 function getScrollAmount() {
-    let racesWidth = races.scrollWidth;
-    return -(racesWidth - window.innerWidth);
+    let wrapperWidth = wrapper.scrollWidth;
+    return -(wrapperWidth - window.innerWidth);
 }
 
-const tween = gsap.to(races, {
+const tween = gsap.to(wrapper, {
     x: getScrollAmount,
     duration: 3,
     ease: "none",

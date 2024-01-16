@@ -1,43 +1,36 @@
-document.addEventListener("DOMContentLoaded", () => {
-    window.addEventListener("scroll", () => {
-        let scrollY = window.scrollY;
+gsap.registerPlugin(ScrollTrigger);
 
-        scrollY > window.innerHeight ? scrollY = window.innerHeight : 0;
+let mainWrapper = document.querySelector(".main-wrapper");
+let sections = gsap.utils.toArray(".scroll-x");
 
-        document.getElementById("cutter1").style.bottom = `${scrollY}px`;
-        document.getElementById("cutter2").style.top = `${scrollY}px`;
-        document.getElementById("cutter3").style.bottom = `${scrollY}px`;
-
-        document.getElementById("cutter-2-1").style.top = `${window.innerHeight - scrollY}px`;
-        document.getElementById("cutter-2-2").style.bottom = `${window.innerHeight - scrollY}px`;
-        document.getElementById("cutter-2-3").style.top = `${window.innerHeight - scrollY}px`;
-
-    });
-});
+let wrapper = document.querySelector(".wrapper");
+let section = document.querySelector(".section0002");
 
 
-const wrapper = document.querySelector(".wrapper");
-console.log(wrapper.offsetWidth)
-
-function getScrollAmount() {
-    let wrapperWidth = wrapper.scrollWidth;
-    return -(wrapperWidth - window.innerWidth);
-}
-
-const tween = gsap.to(wrapper, {
-    x: getScrollAmount,
-    duration: 3,
-    ease: "none",
-});
-
-
-ScrollTrigger.create({
-    trigger: ".zewrapper",
-    start: "top top",
-    end: () => `+=${getScrollAmount() * -1}`,
-    pin: true,
-    animation: tween,
-    scrub: 1,
-    invalidateOnRefresh: true,
+let tm = gsap.timeline({
+    scrollTrigger: {
+        trigger: mainWrapper,
+        pin: true,
+        scrub: 1,
+        start: "left top",
+        end: "right top",
+        markers: true
+    }
 })
 
+tm.to(sections, {xPercent: -100 * (sections.length - 1), ease: "none"})
+.to(section, {clipPath: "polygon(100% 0%, 0% 0%, 0% 100%, 100% 100%)"})
+
+
+gsap.to(".text", {
+    y: 0,
+    opacity: 1,
+    duration: 1,
+
+    scrollTrigger: {
+        trigger: ".main-wrapper",
+        start: "left 40%",
+        end: "left 10%",
+        scrub: 1,
+    }
+});

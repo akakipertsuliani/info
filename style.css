@@ -4,93 +4,86 @@
 }
 
 body {
-    max-width: 100vw;
-    height: 300vh;
-    background: lightblue;
     overflow-x: hidden;
 }
 
-.section {
-    width: 100%;
-    min-height: 100vh;
+.how {
+    width: 300vw;
+    display: flex;
 }
 
-.cutter {
-    position: fixed;
+section {
     width: 100vw;
     height: 100vh;
-    background-image: url(bg1.jpg);
-    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-weight: 700;
+    font-size: 10rem;
 }
 
-#cutter1 {
-    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
+.section1 {
+    background: lightgreen;
 }
 
-#cutter2 {
-    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
+.section2 {
+    background: lightblue;
 }
 
-#cutter3 {
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
-}
-
-.cutter-two {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    background-image: url(bg2.jpg);
-    background-size: cover;
-}
-
-#cutter-2-1 {
-    top: 100%;
-    clip-path: polygon(0 0, 30% 0, 30% 100%, 0% 100%);
-}
-
-#cutter-2-2 {
-    bottom: 100%;
-    clip-path: polygon(30% 0, 70% 0, 70% 100%, 30% 100%);
-}
-
-#cutter-2-3 {
-    top: 100%;
-    clip-path: polygon(70% 0, 100% 0, 100% 100%, 70% 100%);
-}
-
-.wrapper {
-    width: 500vw;
-    height: 100vh;
+.main-wrapper {
+    width: 200vw;
     display: flex;
 }
 
 .section01 {
-    background: transparent;
+    background: lightgray;
 }
 
-.section02 {
-    background: lightcoral;
+.text {
+    transform: translateY(100px);
+    opacity: 0;
 }
 
-.section03 {
-    background: lightseagreen;
+.wrapper {
+    width: 100vw;
+    height: 100vh;
 }
 
-.section04 {
-    background-image: url(bg1.jpg);
+.in-wrapper {
+    position: relative;
+    width: 200vw;
+    height: 100vh;
+}
+
+.section-x {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.section0001 {
+    background: darkblue;
+}
+
+.section0002 {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    background: darkcyan;
+}
+
+.box {
+    width: 40%;
+    height: 70%;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    border-radius: 50px;
 }
 
-.section5 {
-    position: relative;
-    z-index: 5;
-    background: red;
+.box1 {
+    background-image: url(bg.jpg);
 }
 
-.zewrapper {
-    position: absolute;
-    top: 100vh;
-    z-index: 3;
+.box2 {
+    background-image: url(bg2.jpg);
 }
